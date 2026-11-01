@@ -147,11 +147,21 @@ DB_PASSWORD=your_password
 
 Filen `.env` skal være tilføjet til `.gitignore`, så databaseadgangskoder ikke uploades til GitHub.
 
-## Test
+## Testing
 
-API'et er manuelt testet med Insomnia.
+API'et er testet med Insomnia.
 
-Alle 20 endpoints er gennemgået med de forventede HTTP-statuskoder. Der er desuden udført udvalgte tests af ugyldige ID'er, manglende ressourcer og sletning af eksisterende data.
+Alle 20 endpoints er gennemgået med de forventede HTTP-statuskoder.
+
+En eksport af API-requests findes i `tests/hogwarts.insomnia.yaml` i Insomnia v5-format.
+
+For at teste API'et:
+
+1. Åbn Insomnia.
+2. Vælg Import.
+3. Importér filen `tests/hogwarts.insomnia.yaml`.
+4. Sørg for, at API-serveren kører på `http://localhost:3000`.
+5. Udfør de ønskede HTTP-requests.
 
 ## Arkitektur
 
